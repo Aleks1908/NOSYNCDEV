@@ -12,6 +12,7 @@
     color: white;
     font-family: "Poppins";
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .navbar-main img {
@@ -26,4 +27,12 @@
     justify-content: space-between;
     align-items: center;
     width: 50%;
+    /* margin-right: 2%; */
 }
+
+.navbar-buttons a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+

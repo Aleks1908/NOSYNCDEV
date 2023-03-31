@@ -8,10 +8,10 @@ const Navbar = () => {
                 <img src="./public/Treckwise-logo.png" alt="" />
             </div>
             <div className="navbar-buttons">
-                <div>About</div>
-                <div>Questionnaire</div>
-                <div>Results</div>
-                <div>Contact us</div>
+                <a href="#">About</a>
+                <a href="#">Questionnaire</a>
+                <a href="#">Results</a>
+                <a href="#">Contact us</a>
             </div>
         </div>
     )
