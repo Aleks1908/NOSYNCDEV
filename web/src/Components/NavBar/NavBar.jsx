@@ -4,7 +4,9 @@ import "./navbar.css";
 const Navbar = () => {
     return(
         <div className="navbar-main">
-            <div>Logo</div>
+            <div>
+                <img src="./public/Treckwise-logo.png" alt="" />
+            </div>
             <div className="navbar-buttons">
                 <div>About</div>
                 <div>Questionnaire</div>
