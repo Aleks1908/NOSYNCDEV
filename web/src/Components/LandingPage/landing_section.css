@@ -19,7 +19,18 @@ body {
     font-family: "Rajdhani";
 }
 
-.landing-header {
+.landing-main .landing-header {
     font-size: 5rem;
-    font-weight: 700;
+}
+.landing-main .header-info{
+    width: 70%;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.15rem;
+}
+.landing-main .header-btn a{
+    font-size: 1.4rem;
+    background-color: #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
 }
