@@ -1,10 +1,11 @@
 import './App.css'
+import LandingSection from './Components/LandingPage/LandingSection'
 
 function App() {
 
   return (
     <div className="App">
-      <p>NOSYNCDEV</p>
+      <LandingSection />
     </div>
   )
 }

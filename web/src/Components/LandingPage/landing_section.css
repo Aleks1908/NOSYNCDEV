@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+
+body {
+    margin: 0;
+}
+
+.landing-main {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/public/traveling-image.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Rajdhani";
+}
+
+.landing-header {
+    font-size: 5rem;
+    font-weight: 700;
+}
