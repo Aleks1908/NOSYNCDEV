@@ -1,0 +1,23 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    background-color: #033852;
+    color: white;
+}
+
+@media only screen and (max-width: 900px) {
+    .footer-container {
+        height: 10vh;
+    }
+    .footer-container p {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .footer-container {
+        font-size: 0.8em;
+    }
+}
