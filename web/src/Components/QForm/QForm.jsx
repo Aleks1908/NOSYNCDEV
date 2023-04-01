@@ -2,43 +2,60 @@ import React from "react";
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useEffect } from "react";
+import axios from 'axios';
 import './QForm.css'
 
 const QForm = () => {
-    const [formStep, setFormStep] = React.useState(0);
-    const onSubmit = (data) => {
-        console.log(Object.keys(errors));
-    };
-
 
     const { register, 
         handleSubmit, 
-        formState: {errors} 
+        formState: {errors},
+        watch
     } = useForm({ mode: 'all' });
 
+    const [formStep, setFormStep] = React.useState(0);
+    const onSubmit = (data) => {
+        // console.log(Object.keys(errors));
+
+    };
+    
+    const values = watch();
+    // console.log(values)
+
+    useEffect(()=>{
+        // console.log("USEEFF")
+        Object.values(values).forEach((value) => {
+          if (value === ""){
+            errors.initLoad = true;
+            checkButtonAvailability();
+            return;
+          }
+        });
+    }, [values]);
+
+   
+
     const [buttonState, setButtonState] = useState(
-        'hackaubg-register-btn disabled'
+        'register-btn disabled'
     );
     const [submitPressed, setSubmitPressed] = useState(false); // eslint-disable-line
     const [submitButtonValue, setSubmitButtonValue] = useState('Register'); // eslint-disable-line
 
 
-
     const checkButtonAvailability = () => {
-        console.log("HERE")        
         if (Object.keys(errors).length != 0) {
-            setButtonState('hackaubg-register-btn error');
+            setButtonState('register-btn error');
             setSubmitPressed(false);
-            setSubmitButtonValue('Check inputs');
+            setSubmitButtonValue('Please fill in all inputs');
             return;
         } else if (Object.keys(errors).length == 0 && submitPressed) {
-            setButtonState('hackaubg-register-btn');
+            setButtonState('register-btn');
             setSubmitButtonValue('Submit');
             setSubmitPressed(false);
             setFormStep(formStep + 1);
             return;
         }
-        setButtonState('hackaubg-register-btn');
+        setButtonState('register-btn');
         setSubmitButtonValue('Submit');
     };
 
@@ -50,13 +67,6 @@ const QForm = () => {
         }
     }, [Object.keys(errors)]);
 
-
-    useEffect(()=>{
-        errors.initLoad = true;
-        checkButtonAvailability()
-    }, [formStep])
-
-    console.log(formStep, errors)
 
   return (
     <div className="registration-main" id="registration">
@@ -70,7 +80,139 @@ const QForm = () => {
                     <input
                         type="text"
                         placeholder="Enter your name"
-                        {...register('fullname', {
+                        {...register('1', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <div className="send-info">
+                <label>
+                    Full Name
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('2', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <div className="send-info">
+                <label>
+                    Full Name
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('3', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <div className="send-info">
+                <label>
+                    Full Name
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('4', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <div className="send-info">
+                <label>
+                    Full Name
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('5', {
                             required: {
                                 value: true,
                                 message: '*This field is required'
@@ -116,7 +258,73 @@ const QForm = () => {
                     <input
                         type="text"
                         placeholder="Enter your name"
-                        {...register('a', {
+                        {...register('12', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <div className="send-info">
+                <label>
+                    Toni
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('99', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <div className="send-info">
+                <label>
+                    Toni
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('88', {
                             required: {
                                 value: true,
                                 message: '*This field is required'
