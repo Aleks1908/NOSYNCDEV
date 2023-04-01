@@ -67,9 +67,7 @@ async def return_activities(request: Request):
 
                                               "activity_descriptions": activity_descriptions }))
 origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    "http://localhost:5174",
+  "*"
 ]
 
 # Configure CORS middleware
