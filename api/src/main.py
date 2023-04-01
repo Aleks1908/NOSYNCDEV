@@ -32,7 +32,7 @@ def create_openai_request_message_activities(json_data):
     music_preference = json_data["music_preference"]
     fears = json_data["fears"]
 
-    str_message = f"How would you describe yourself in three words? What is the most extreme activity you have done? What is your favourite color? What type of music do you listen to? What are your fears? {short_description} {extreme_activity} {fav_color} {music_preference} {fears} Based on the user's answers recommend five activities in {city}. Return the activities in the format activity: short description up to 20 words."
+    str_message = f"How would you describe yourself in three words? What is the most extreme activity you have done? What is your favourite color? What type of music do you listen to? What are your fears? {short_description} {extreme_activity} {fav_color} {music_preference} {fears} Based on the user's answers recommend five activities in {city}. Return the activities in the format activity: description with reasons why do you recommend it, limit it to 25 words."
 
     return str_message
 
