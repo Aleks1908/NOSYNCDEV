@@ -51,7 +51,7 @@ const QForm = () => {
             <fieldset className="from-personal-info">
                 <div className="send-info">
                     <label>
-                    What climate environment do you prefer? 
+                        <p>I want to go to a </p>
 
                         <select
                             defaultValue=""
@@ -61,21 +61,17 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose climate
                             </option>
-                            <option value="Warm">Warm</option>
-                            <option value="Cold">Cold</option>
+                            <option value="Warm climate">Warm</option>
+                            <option value="Cold climate">Cold</option>
+                        
                         </select>
+                        <p>place. </p>
                     </label>
-                    {errors.climate && (             //variables!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
                 <div className="send-info">
                     <label>
-                    What accommodation do you look for?
+                    <p>I prefer a(n) </p>
 
                         <select
                             defaultValue=""
@@ -85,21 +81,17 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose one option
+                                
                             </option>
-                            <option value="High-End">High-End</option>
-                            <option value="Budget">Budget</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Affordable">Affordable</option>
                         </select>
+                        <p> accommodation. </p>
                     </label>
-                    {errors.accommodation && (                //variables!!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
                 <div className="send-info">
                     <label>
-                    What city do you prefer?
+                    <p>I am more interested in </p>
 
                         <select
                             defaultValue=""
@@ -109,22 +101,16 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose city type
                             </option>
-                            <option value="Historic">Historic</option>
-                            <option value="Cultural">Cultural</option>
-                            <option value="Modern">Modern</option>
+                            <option value="Historic sites">Historic sites</option>
+                            <option value="Modern attractions">Modern attractions</option>
                         </select>
+                        <p>.</p>
                     </label>
-                    {errors.city_preference && (             //variables!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
                 <div className="send-info">
                     <label>
-                    What type of trip are you planning?
+                    <p>I am into </p>
 
                         <select
                             defaultValue=""
@@ -134,21 +120,16 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose trip type
                             </option>
-                            <option value="Leisure">Leisure</option>
-                            <option value="Adventure">Adventure</option>
+                            <option value="Leisure trip">Leisure</option>
+                            <option value="Adventures trip">Adventures</option>
                         </select>
+                        <p> trips. </p>
                     </label>
-                    {errors.trip_plan && (             //variables!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
                 <div className="send-info">
                     <label>
-                    What attractions do you prefer to visit?
+                    <p>I would rather visit </p>
 
                         <select
                             defaultValue=""
@@ -158,21 +139,16 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose one option
                             </option>
-                            <option value="Urban">Urban</option>
-                            <option value="Natural">Natural</option>
+                            <option value="Urban places">Urban</option>
+                            <option value="Natural environment">Natural</option>
                         </select>
+                        <p> destination. </p>
                     </label>
-                    {errors.attractions && (             //variables!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
                 <div className="send-info">
                     <label>
-                    What cultural immersion do you prefer?
+                    
 
                         <select
                             defaultValue=""
@@ -182,21 +158,17 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose one option
+                                
                             </option>
-                            <option value="Touristy">Touristy</option>
-                            <option value="Off-the-beaten-track">Off-the-beaten-track</option>
+                            <option value="Touristy destination">A touristy destination</option>
+                            <option value="Off-the-beaten-path">Off-the-beaten-path</option>
                         </select>
+                        <p> is my way to go. </p>
                     </label>
-                    {errors.immersion && (             //variables!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
                 <div className="send-info">
                     <label>
-                    What are your food preferences
+                    <p>I would prefer eating </p>
 
                         <select
                             defaultValue=""
@@ -206,17 +178,12 @@ const QForm = () => {
                             })}
                         >
                             <option value="" disabled>
-                                Choose city type
                             </option>
-                            <option value="Historic">Local cuisine</option>
+                            <option value="Local cuisine">Local cuisine</option>
                             <option value="International-cuisine">International cuisine</option>
                         </select>
+                        <p> .</p>
                     </label>
-                    {errors.food && (             //variables!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
                 </div>
             </fieldset>
             <input
