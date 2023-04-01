@@ -1,4 +1,5 @@
-/* Hamburger menu */
+@media only screen and (max-width: 900px) {
+    /* Hamburger menu */
     .navbar-main .icon a {
         background: transparent;
         display: block;
@@ -18,7 +19,7 @@
     .navbar-main {
         margin-top: 3%;
     }
-
+}
 
 @media only screen and (max-width: 550px) {
     .navbar-main img {
