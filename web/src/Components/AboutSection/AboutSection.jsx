@@ -11,9 +11,6 @@ export const AboutSection = () => {
                     are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden 
                     in the middle of text. 
                 </p>
-                {/* <div className="landing-btn"> 
-                    <a href="#">Read more</a>
-                </div> */}
             </div>
             <div className="about-picture">
                 <img src="././public/about-picture.jpg" alt="Traveling around the world" />
