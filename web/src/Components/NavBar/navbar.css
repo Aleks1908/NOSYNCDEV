@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .navbar-main {
     display: flex;
@@ -14,10 +13,11 @@
     font-size: 1.3rem;
     font-weight: bold;
     width: 90%;
+    margin-top: 1%;
 }
 
 .navbar-main img {
-    width: 13vw;
+    width: 15vw;
     height: fit-content;
     display: flex;
     align-items: center;
@@ -90,17 +90,18 @@
 
 @media only screen and (max-width: 900px) {
     /* Style the hamburger menu */
-    .navbar-main a {
-        background: white;
+    .navbar-main .icon a {
+        background: transparent;
         display: block;
         position: absolute;
         right: 0;
         top: 0;
+        color: white;
     }
     
     /* Add a grey background color on mouse-over */
-    .navbar-main a:hover {
-        background-color: #ddd;
+    .navbar-main .icon a:hover {
+        /* background-color: #ddd; */
         color: white;
     }
     
