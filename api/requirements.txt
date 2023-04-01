@@ -18,3 +18,6 @@ tqdm==4.65.0
 typing_extensions==4.5.0
 urllib3==1.26.15
 yarl==1.8.2
+
+jsonschema~=4.17.3
+python-dotenv~=1.0.0

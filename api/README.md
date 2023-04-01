@@ -1,3 +1,6 @@
+# Run API
+* First run `make install-api` in main dir
+* Second run `make run-api` in main dir
 # Setting venv 
 *  Run `python3 -m venv env` in `api` folder
 * ⚠️Run `source env/bin/activate` in `api` folder before doing anything
