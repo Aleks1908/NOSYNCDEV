@@ -7,7 +7,7 @@ import './QForm.css'
 const QForm = () => {
     const [formStep, setFormStep] = React.useState(0);
     const onSubmit = (data) => {
-        console.log(data)
+        console.log(Object.keys(errors));
     };
 
 
@@ -36,7 +36,6 @@ const QForm = () => {
             setFormStep(formStep + 1);
             console.log(Object.keys(errors));
             setSubmitPressed(false);
-            
             return;
         }
         setButtonState('hackaubg-register-btn');
@@ -72,6 +71,11 @@ const QForm = () => {
                         </select>
                         <p>place. </p>
                     </label>
+                    {errors.climate && (                //variables!!!!!
+                        <p className="error-text">
+                            *This field is required
+                        </p>
+                    )}
                 </div>
                 <input
             type="submit"
@@ -89,7 +93,7 @@ const QForm = () => {
                         <select
                             defaultValue=""
                             className="select"
-                            {...register('climate', {       //variables!!!!!!!!!
+                            {...register('aaa', {       //variables!!!!!!!!!
                                 required: true
                             })}
                         >
@@ -101,6 +105,11 @@ const QForm = () => {
                         </select>
                         <p>place. </p>
                     </label>
+                    {errors.aaa && (                //variables!!!!!
+                        <p className="error-text">
+                            *This field is required
+                        </p>
+                    )}
                 </div>
                 <input
             type="submit"
