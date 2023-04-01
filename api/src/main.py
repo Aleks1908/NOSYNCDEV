@@ -8,13 +8,17 @@ from openai_test import ask_openai
 
 app = FastAPI()
 
+
 def create_openai_request_message(json_data):
     """Creates the request message for OpenAI with values from response_body"""
-    str_message = "Suggest 5 cities with cold climate, luxury accommodation, modern attractions, natural environment, which are adventure-packed, which have airport. Return the cities in the format 'city, country':'short description'"
-    destination = json_data["destination"]
     climate = json_data["climate"]
+    accommodation = json_data["accommodation"]
+    environment_type = json_data["environment_type"]
+    trip_type = json_data["trip_type"]
 
-    message = destination + " " + climate
+
+    str_message = f"Suggest 5 cities with {climate} climate, {accommodation} accommodation, {environment_type} environment, which are {trip_type}, which have an airport. Return the cities in the format 'city, country':'short description'"
+
     return str_message
 
 @app.post("/showcities/")
