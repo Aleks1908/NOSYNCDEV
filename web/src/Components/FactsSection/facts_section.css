@@ -2,34 +2,50 @@
 .fact-card-main {
     width: 400px;
     height: fit-content;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: "Rajdhani";
-    margin: 5%;
+    margin: 3% 2%;
 }
 
 .fact-card-picture img {
-    width: 280px;
+    width: 100%;
     height: auto;
     margin-top: 10%;
 }
 
-.fact-card-text {
-    margin: 5%;
+.fact-card-text h1{
+    font-size: 1.8rem;
 }
 
 .fact-card-text p{
     text-align: justify;
+    font-size: 1.3rem;
 }
 
 /* Css for the FactsSection (all cards) */
-.facts-container {
+.facts-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rajdhani";
+    margin: 5%;
+    width: 90%;
+    border: 4px solid #033852;
+    border-radius: 50px;
+}
+
+.facts-components {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.facts-header {
+    font-size: 2.7rem;
+    color: #033852;
+}
