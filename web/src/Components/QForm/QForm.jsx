@@ -24,7 +24,8 @@ const QForm = () => {
 
 
 
-    const checkButtonAvailability = () => {        
+    const checkButtonAvailability = () => {
+        console.log("HERE")        
         if (Object.keys(errors).length != 0) {
             setButtonState('hackaubg-register-btn error');
             setSubmitPressed(false);
@@ -32,95 +33,126 @@ const QForm = () => {
             return;
         } else if (Object.keys(errors).length == 0 && submitPressed) {
             setButtonState('hackaubg-register-btn');
-            setSubmitButtonValue('Success');
-            setFormStep(formStep + 1);
-            console.log(Object.keys(errors));
+            setSubmitButtonValue('Submit');
             setSubmitPressed(false);
+            setFormStep(formStep + 1);
             return;
         }
         setButtonState('hackaubg-register-btn');
         setSubmitButtonValue('Submit');
     };
-    console.log(formStep)
-    useEffect(checkButtonAvailability, [Object.keys(errors)]);
+
+
+    useEffect(() => {
+        checkButtonAvailability()
+        if(Object.keys(errors).length > 1 && "initLoad" in errors){
+            delete errors.initLoad;
+        }
+    }, [Object.keys(errors)]);
+
+
+    useEffect(()=>{
+        errors.initLoad = true;
+        checkButtonAvailability()
+    }, [formStep])
+
+    console.log(formStep, errors)
 
   return (
     <div className="registration-main" id="registration">
         <h1>Questionare</h1>
-        <form 
-                onSubmit={handleSubmit(onSubmit)} 
-                className="reg-form"
+        {formStep === 0 &&<form 
+        onSubmit={handleSubmit(onSubmit)}
         >
-            {formStep === 0 && (<fieldset className="from-personal-info">
-                <div className="send-info">
-                    <label>
-                        <p>I want to go to a </p>
-
-                        <select
-                            defaultValue=""
-                            className="select"
-                            {...register('climate', {       //variables!!!!!!!!!
-                                required: true
-                            })}
-                        >
-                            <option value="" disabled>
-                            </option>
-                            <option value="Warm climate">Warm</option>
-                            <option value="Cold climate">Cold</option>
-                        
-                        </select>
-                        <p>place. </p>
-                    </label>
-                    {errors.climate && (                //variables!!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
-                </div>
-                <input
+            <div className="send-info">
+                <label>
+                    Full Name
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('fullname', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <input
             type="submit"
             className={buttonState}
             value={submitButtonValue}
             onClick={() => {
-                setSubmitPressed(true);
+                setSubmitPressed(true)
+                checkButtonAvailability();
             }}
                 />
-            </fieldset>)}
-            {formStep === 1 && (<fieldset className="from-personal-info">
-                <div className="send-info">
-                    <label>
-                        <p>BRAAAT</p>
-                        <select
-                            defaultValue=""
-                            className="select"
-                            {...register('aaa', {       //variables!!!!!!!!!
-                                required: true
-                            })}
-                        >
-                            <option value="" disabled>
-                            </option>
-                            <option value="Warm climate">Warm</option>
-                            <option value="Cold climate">Cold</option>
-                        
-                        </select>
-                        <p>place. </p>
-                    </label>
-                    {errors.aaa && (                //variables!!!!!
-                        <p className="error-text">
-                            *This field is required
-                        </p>
-                    )}
-                </div>
-                <input
+        </form>}
+        {formStep === 1 &&<form 
+        onSubmit={handleSubmit(onSubmit)}
+        >
+            <div className="send-info">
+                <label>
+                    Toni
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        {...register('a', {
+                            required: {
+                                value: true,
+                                message: '*This field is required'
+                            },
+                            minLength: {
+                                message:
+                                    '*Minimum length is 4 characters',
+                                value: 4
+                            },
+                            maxLength: {
+                                message:
+                                    'Maximum length is 50 characters',
+                                value: 50
+                            },
+                            pattern: {
+                                value: /^[\t a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/,
+                                message:
+                                    'No special characters and trailing spaces'
+                            }
+                        })}
+                    />
+                </label>
+                <p className="error-msg">
+                    {errors.fullname?.message}
+                </p>
+            </div>
+            <input
             type="submit"
             className={buttonState}
             value={submitButtonValue}
             onClick={() => {
-                setSubmitPressed(true);
+                setSubmitPressed(true)
+                checkButtonAvailability();
             }}
                 />
-            </fieldset>)}            
-        </form>
+        </form>}
     </div>
   );
 }
