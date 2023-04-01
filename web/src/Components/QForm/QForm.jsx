@@ -21,8 +21,6 @@ const QForm = () => {
     const [submitPressed, setSubmitPressed] = useState(false); // eslint-disable-line
     const [submitButtonValue, setSubmitButtonValue] = useState('Register'); // eslint-disable-line
 
-
-
     const checkButtonAvailability = () => {        
         if (Object.keys(errors).length != 0) {
             setButtonState('hackaubg-register-btn error');
