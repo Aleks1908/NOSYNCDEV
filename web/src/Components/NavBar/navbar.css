@@ -90,7 +90,7 @@
 
 @media only screen and (max-width: 900px) {
     /* Style the hamburger menu */
-    .navbar-main a.icon {
+    .navbar-main a {
         background: white;
         display: block;
         position: absolute;
@@ -101,14 +101,9 @@
     /* Add a grey background color on mouse-over */
     .navbar-main a:hover {
         background-color: #ddd;
-        color: black;
-    }
-    
-    /* Style the active link (or home/logo) */
-    .active {
-        background-color: #04AA6D;
         color: white;
     }
+    
     .navbar-main img {
         width: 30%;
     }
