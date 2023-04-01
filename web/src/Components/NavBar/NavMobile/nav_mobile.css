@@ -1,6 +1,4 @@
 /* Hamburger menu */
-@media only screen and (max-width: 900px) {
-    /* Style the hamburger menu */
     .navbar-main .icon a {
         background: transparent;
         display: block;
@@ -10,7 +8,6 @@
         color: white;
     }
     
-    /* Add a grey background color on mouse-over */
     .navbar-main .icon a:hover {
         color: white;
     }
@@ -21,7 +18,7 @@
     .navbar-main {
         margin-top: 3%;
     }
-}
+
 
 @media only screen and (max-width: 550px) {
     .navbar-main img {

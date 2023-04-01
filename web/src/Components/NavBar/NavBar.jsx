@@ -1,8 +1,7 @@
 import React from "react";
 import { useMediaQuery } from 'react-responsive';
-import NavDesktop from "./NavDesktop";
-import NavMobile from "./NavMobile";
-import "./navbar.css";
+import NavDesktop from "./NavDesktop/NavDesktop";
+import NavMobile from "./NavMobile/NavMobile";
 
 const Navbar = ({ props }) => {
     const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
