@@ -11,7 +11,7 @@
     font-size: 1.3rem;
     font-weight: bold;
     width: 90%;
-    margin-top: 1%;
+    margin-top: 1%; 
 }
 
 .navbar-main img {
@@ -85,36 +85,4 @@
         font-size: 1.3rem;
     }
 }
-
-/* Hamburger menu */
-@media only screen and (max-width: 900px) {
-    /* Style the hamburger menu */
-    .navbar-main .icon a {
-        background: transparent;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        color: white;
-    }
-    
-    /* Add a grey background color on mouse-over */
-    .navbar-main .icon a:hover {
-        color: white;
-    }
-    
-    .navbar-main img {
-        width: 30%;
-    }
-    .navbar-main {
-        margin-top: 3%;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .navbar-main img {
-        width: 40%;
-    }
-}
-
 

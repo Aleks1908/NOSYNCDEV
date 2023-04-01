@@ -9,12 +9,12 @@ const NavMobile = () => {
                 <img src="../../../journo-logo.png" alt="" />
             </div>
             <GiHamburgerMenu/>
-            {/* <div className="navbar-buttons">
+            <div className="navbar-mobile-buttons">
                 <a href="#">About</a>
                 <a href="#">Questionnaire</a>
                 <a href="#">Results</a>
                 <a href="#">Contact us</a>
-            </div> */}
+            </div>
             
         </div>
     );
