@@ -41,6 +41,7 @@ body {
     background-color: #fff;
     padding: 10px 40px;
     border-radius: 50px;
+    text-decoration: none;
 }
 .dimmer {
     display: flex;
@@ -52,3 +53,21 @@ body {
     justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+  #spin:after {
+    content:"";
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { content:"Good morning!";}
+    10% { content:"Guten Morgen!";}
+    20% { content:"Bon matin!";}
+    30% { content:"Buen dia!";}
+    40% { content:"доброе утро!";}
+    50% { content: "Ohayō!"; }
+    60% { content: "Buongiorno!"; }
+    70% { content: "God morgon!"; }
+    80% { content: "Dobro utro!"; }
+    90% { content: "Bom dia!"; }
+  }
