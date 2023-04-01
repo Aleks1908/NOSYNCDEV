@@ -1,20 +1,16 @@
 import React from "react";
-import "./navbar.css";
+import { useMediaQuery } from 'react-responsive';
+import NavDesktop from "./NavDesktop/NavDesktop";
+import NavMobile from "./NavMobile/NavMobile";
 
-const Navbar = () => {
-    return(
-        <div className="navbar-main">
-            <div>
-                <img src="./public/Treckwise-logo.png" alt="" />
-            </div>
-            <div className="navbar-buttons">
-                <a href="#">About</a>
-                <a href="#">Questionnaire</a>
-                <a href="#">Results</a>
-                <a href="#">Contact us</a>
-            </div>
-        </div>
-    )
+const Navbar = ({ props }) => {
+    const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
+
+    if (!isMobile) {
+        return <NavDesktop props={props} />;
+    } else {
+        return <NavMobile props={props} />;
+    }
 }
 
 export default Navbar;
