@@ -4,8 +4,8 @@
 
 # Requirements file
 * To install libs and packages use `pip3 install <package-name>`
-* Before you push run `pip freeze > requirements.txt` so that all pip libs could be loaded into it.
-* To install all libs run `pip install -r requirements.txt`
+* Before you push run `pip freeze > requirements.txt` so that all pip libs and dependencies  could be loaded into it.
+* To install all dependencies  run `pip install -r requirements.txt`. After that install them when prompted by PyCharm. This is done because updating the dependencies automatically can potentially break your code
 
 # .env file
 Here are located all api keys. ⚠️This file should not be leaked!
