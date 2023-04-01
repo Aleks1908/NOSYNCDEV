@@ -6,6 +6,8 @@ import AboutSection from './Components/AboutSection/AboutSection';
 import Footer from './Components/Footer/Footer';
 import "./main.css";
 
+document.body.className = 'main-container';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <LandingSection/>
