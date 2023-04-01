@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+
+body {
+    margin: 0;
+}
+
+.landing-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/public/traveling-image.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Rajdhani";
+}
+.header{
+    display: flex;
+    align-self: center;
+    height: 40%;
+    align-items: center;
+}
+.landing-main .landing-header {
+    font-size: 5rem;
+}
+.landing-main .header-info{
+    width: 70%;
+    height: 25%;
+    text-align: center;
+    font-size: 1.15rem;
+}
+.landing-main .header-btn{
+    height: 10%;
+}
+.landing-main .header-btn a{
+    font-size: 1.4rem;
+    background-color: #fff;
+    padding: 10px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.dimmer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Landing text animation */
+  #spin:after {
+    content:"";
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { content:"Good morning!";}
+    10% { content:"Guten Morgen!";}
+    20% { content:"Bon matin!";}
+    30% { content:"Buen dia!";}
+    40% { content:"доброе утро!";}
+    50% { content: "Ohayō!"; }
+    60% { content: "Buongiorno!"; }
+    70% { content: "God morgon!"; }
+    80% { content: "Dobro utro!"; }
+    90% { content: "Bom dia!"; }
+  }
