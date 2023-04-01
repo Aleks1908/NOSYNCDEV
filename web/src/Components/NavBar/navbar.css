@@ -90,23 +90,29 @@
 
 @media only screen and (max-width: 900px) {
     /* Style the hamburger menu */
-.navbar-main a.icon {
-    background: white;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  .navbar-main a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the active link (or home/logo) */
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
+    .navbar-main a.icon {
+        background: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .navbar-main a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: #04AA6D;
+        color: white;
+    }
+    .navbar-main img {
+        width: 30%;
+    }
+    .navbar-main {
+        margin-top: 3%;
+    }
 }

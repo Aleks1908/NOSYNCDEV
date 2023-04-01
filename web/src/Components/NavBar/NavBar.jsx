@@ -22,7 +22,7 @@ const Navbar = ({ props }) => {
     const NavMobile = () => {
         return (
             <div className="navbar-main">
-                <div>
+                <div className="journo-logo">
                     <img src="../../../journo-logo.png" alt="" />
                 </div>
                 {/* <div className="navbar-buttons">
@@ -31,7 +31,7 @@ const Navbar = ({ props }) => {
                     <a href="#">Results</a>
                     <a href="#">Contact us</a>
                 </div> */}
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
