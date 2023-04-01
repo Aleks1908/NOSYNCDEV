@@ -7,4 +7,5 @@ install-api:
 .PHONY: run-api
 run-api:
 	cd ./api && bash -c "source env/bin/activate && pip3 install -r requirements.txt"
+	cd ./api/src && uvicorn main:app --reload
 
