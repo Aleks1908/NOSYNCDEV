@@ -21,7 +21,8 @@ body {
 .header{
     display: flex;
     align-self: center;
-    height: 40%;
+    height: 30%;
+    margin-top: 7%;
     align-items: center;
 }
 .landing-main .landing-header {
@@ -71,6 +72,6 @@ body {
     50% { content: "Ohayō!"; }
     60% { content: "Buongiorno!"; }
     70% { content: "God morgon!"; }
-    80% { content: "Dobro utro!"; }
+    80% { content: "Добро утро!"; }
     90% { content: "Bom dia!"; }
   }
