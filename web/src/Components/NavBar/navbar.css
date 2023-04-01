@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400');
 
 .navbar-main {
     display: flex;
@@ -9,7 +10,7 @@
     margin-right: 5%;
     height: 10vh;
     color: white;
-    font-family: "Poppins";
+    font-family: "Crimson Pro";
     font-size: 1.3rem;
     font-weight: bold;
     width: 90%;
@@ -27,12 +28,67 @@
     justify-content: space-between;
     align-items: center;
     width: 50%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    flex-direction: row;
 }
 
 .navbar-buttons a {
+    position: relative;
+    z-index: 1;
+    transition: 0.35s;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
     color: white;
     text-decoration: none;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    white-space: nowrap;
 }
 
+.navbar-buttons a:hover {
+    color: #033852;
+    font-weight: bolder;
+}
+
+.navbar-buttons a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    border-radius: 3px;
+    background: #fff;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.35s;
+}
+
+.navbar-buttons a:hover:after {
+    transition: 0.35s;
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1240px) {
+    .navbar-buttons {
+        width: 55%;
+        margin-right: 5%;
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile navbar - Hamburger menu */
+@media screen and (max-width: 900px) {
+    /* Styles for screens smaller than 768px */
+  }
