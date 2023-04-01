@@ -1,6 +1,6 @@
 import React from "react";
-import './landing_section.css';
 import Navbar from "../NavBar/NavBar";
+import './landing_section.css';
 
 export const LandingSection = () => {
     return (

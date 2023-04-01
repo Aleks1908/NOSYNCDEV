@@ -42,6 +42,8 @@ body {
     padding: 10px 40px;
     border-radius: 50px;
     text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
 .dimmer {
     display: flex;
@@ -54,6 +56,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Landing text animation */
   #spin:after {
     content:"";
     animation: spin 10s linear infinite;
