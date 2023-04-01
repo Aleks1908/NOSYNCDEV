@@ -8,6 +8,7 @@
 .footer-image {
     width: 100%;
     height: fit-content;
+    background-attachment: fixed;
 }
 
 .footer-text {

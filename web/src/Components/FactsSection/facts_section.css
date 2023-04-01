@@ -1,0 +1,35 @@
+/* Css for the individual Fact Card */
+.fact-card-main {
+    width: 400px;
+    height: fit-content;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Rajdhani";
+    margin: 5%;
+}
+
+.fact-card-picture img {
+    width: 280px;
+    height: auto;
+    margin-top: 10%;
+}
+
+.fact-card-text {
+    margin: 5%;
+}
+
+.fact-card-text p{
+    text-align: justify;
+}
+
+/* Css for the FactsSection (all cards) */
+.facts-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
