@@ -43,7 +43,7 @@ const QForm = () => {
 
   return (
     <div className="registration-main" id="registration">
-        <h1>Questionare</h1>
+        <h1>Where do you want to go?</h1>
         <form 
                 onSubmit={handleSubmit(onSubmit)} 
                 className="reg-form"

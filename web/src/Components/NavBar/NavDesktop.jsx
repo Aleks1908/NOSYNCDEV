@@ -1,22 +1,20 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import "./nav_mobile.css";
+import "./navbar.css";
 
-const NavMobile = () => {
+const NavDesktop = () => {
     return (
         <div className="navbar-main">
-            <div className="journo-logo">
+            <div>
                 <img src="../../../journo-logo.png" alt="" />
             </div>
-            {/* <GiHamburgerMenu/>
-            <div className="navbar-mobile-buttons">
+            <div className="navbar-buttons">
                 <a href="#">About</a>
                 <a href="#">Questionnaire</a>
                 <a href="#">Results</a>
                 <a href="#">Contact us</a>
-            </div> */}
+            </div>
         </div>
     );
 }
 
-export default NavMobile;
+export default NavDesktop;
