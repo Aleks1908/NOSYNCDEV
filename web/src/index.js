@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import LandingSection from './Components/LandingPage/LandingSection';
 import reportWebVitals from './reportWebVitals';
+import QForm from './Components/QForm/QForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <LandingSection/>
+    <QForm/>
   </React.StrictMode>
 );
 
