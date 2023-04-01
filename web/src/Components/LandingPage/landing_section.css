@@ -16,26 +16,24 @@ body {
     color: white;
     font-family: "Rajdhani";
 }
-.header{
+.landing-header{
     display: flex;
     align-self: center;
     height: 30%;
     margin-top: 7%;
     align-items: center;
-}
-.landing-main .landing-header {
     font-size: 5rem;
 }
-.landing-main .header-info{
-    width: 70%;
+.landing-header-info {
+    width: 60%;
     height: 25%;
     text-align: center;
     font-size: 1.15rem;
 }
-.landing-main .header-btn{
+.landing-btn{
     height: 10%;
 }
-.landing-main .header-btn a{
+.landing-btn a{
     font-size: 1.4rem;
     background-color: #fff;
     padding: 10px 40px;
@@ -73,3 +71,38 @@ body {
     80% { content: "Добро утро!"; }
     90% { content: "Bom dia!"; }
   }
+
+@media only screen and (max-width: 800px) {
+    .landing-header {
+        font-size: 3.5rem;
+    }
+    .landing-header-info {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .landing-header {
+        font-size: 3rem;
+        height: 25%;
+        margin-top: 11%;
+    }
+    .landing-header-info {
+        font-size: 0.9rem;
+    }
+    .landing-btn a{
+        font-size: 1rem;
+        padding: 10px 40px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .landing-header {
+        font-size: 2.5rem;
+        height: 20%;
+        margin-top: 23%;
+    }
+    .landing-header-info {
+        margin-bottom: 3%;
+    }
+}

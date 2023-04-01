@@ -1,4 +1,5 @@
 import React from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./navbar.css";
 
 const NavMobile = () => {
@@ -7,9 +8,7 @@ const NavMobile = () => {
             <div className="journo-logo">
                 <img src="../../../journo-logo.png" alt="" />
             </div>
-            <a href="" className="icon" onclick="myFunction()">
-                <i className="fa fa-bars"></i>
-            </a>
+            <GiHamburgerMenu/>
             {/* <div className="navbar-buttons">
                 <a href="#">About</a>
                 <a href="#">Questionnaire</a>

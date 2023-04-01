@@ -101,7 +101,6 @@
     
     /* Add a grey background color on mouse-over */
     .navbar-main .icon a:hover {
-        /* background-color: #ddd; */
         color: white;
     }
     
@@ -110,5 +109,11 @@
     }
     .navbar-main {
         margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .navbar-main img {
+        width: 40%;
     }
 }
