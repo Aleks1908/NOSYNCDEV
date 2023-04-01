@@ -41,7 +41,7 @@ def create_openai_request_message_activities(json_data):
 async def return_cities(request: Request):
 
     # Gets the request body as JSON
-    json_data = await request.json()
+    json_data = request.json()
 
     openai_request_message = create_openai_request_message_cities(json_data)
 
@@ -56,7 +56,7 @@ async def return_cities(request: Request):
 async def return_activities(request: Request):
 
     # Gets the request body as JSON
-    json_data = await request.json()
+    json_data = request.json()
     openai_request_message = create_openai_request_message_activities(json_data)
 
     # OpenAI returns two list one with activities and the other with descriptions
