@@ -21,6 +21,8 @@ def ask_openai(request_message,message_type):
         activities_list, activity_descriptions = split_data_activities(api_response)
 
         return activities_list, activity_descriptions
+    elif message_type == "airport_code":
+        return str(api_response)
 
 
 def split_data_destinations(api_response):
