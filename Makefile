@@ -1,6 +1,7 @@
 Frontendsetup:
 	cd web
 	npm install
+	npm run dev
 Backend setup:
 .PHONY: install-api
 install-api-win:
