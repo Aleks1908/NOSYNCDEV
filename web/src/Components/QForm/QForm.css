@@ -46,6 +46,13 @@ form {
     border-bottom: 3px solid #033852;
 }
 
+input[type=text]{
+    font-size: 1.3rem;
+    font-family: "Rajdhani";
+    font-weight: bold;
+    color: #033852 ;
+}
+
 .register-btn {
     width: fit-content;
     align-items: center;
