@@ -55,7 +55,7 @@ const QForm = () => {
         }
     }
     
-        const [isFetching, setIsFetching] = useState(true);
+        const [isFetching, setIsFetching] = useState(false);
 
 
     const { register, 
@@ -101,6 +101,12 @@ const QForm = () => {
         } else if (Object.keys(errors).length == 0 && submitPressed) {
             setButtonState('register-btn');
             setSubmitButtonValue('Submit');
+            setIsFetching(true);
+
+            setTimeout(() => {
+                setIsFetching(false);
+                console.log("iuashifsabifs")
+            }, 1500);
             setSubmitPressed(false);
             setFormStep(formStep + 1);
             return;
@@ -116,6 +122,13 @@ const QForm = () => {
         }
     }, [Object.keys(errors)]);
 
+if(isFetching){
+    return(
+        <div className="loader">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+    )
+ } else{
     return (
         <div className="registration-main" id="registration">
             <h1>Questionare</h1>
@@ -503,5 +516,8 @@ const QForm = () => {
               </form>)}
         </div>
     );
+ }
+
+    
 }
  export default QForm;

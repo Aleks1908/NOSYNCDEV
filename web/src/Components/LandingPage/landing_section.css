@@ -60,7 +60,7 @@ body {
 /* Landing text animation */
   #spin:after {
     content:"";
-    animation: spin 10s linear infinite;
+    animation: spin 15s linear infinite;
   }
 
   @keyframes spin {
@@ -74,6 +74,7 @@ body {
     70% { content: "God morgon!"; }
     80% { content: "Добро утро!"; }
     90% { content: "Bom dia!"; }
+    100%{content: "Bonjour";}
   }
 
 @media only screen and (max-width: 800px) {
