@@ -14,7 +14,7 @@ export const LandingSection = () => {
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
                 </div>
                 <div className="landing-btn"> 
-                    <a href="#Questionnaire"> Questionare</a>
+                    <a href="#Questionnaire"> Questionnaire</a>
                 </div>
             </div>
         </div>

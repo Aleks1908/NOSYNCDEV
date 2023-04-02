@@ -135,7 +135,7 @@ if(isFetching){
  } else{
     return (
         <div className="registration-main" id="Questionnaire">
-            <h1>Questionare</h1>
+            <h1>Questionnaire</h1>
             {formStep === 0 &&<form 
             onSubmit={handleSubmit(onSubmit)}
             >
