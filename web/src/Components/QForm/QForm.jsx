@@ -6,7 +6,21 @@ import axios from 'axios';
 import './QForm.css'
 
 const QForm = () => {
-
+    const requestDestinations = (data) => {
+        console.log('aaa');
+        console.log("HERE2", data)
+        axios({
+            method:'post',
+            url: "http://localhost:8000/showcities", 
+            data
+        })
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }
     const { register, 
         handleSubmit, 
         formState: {errors},
@@ -15,6 +29,8 @@ const QForm = () => {
 
     const [formStep, setFormStep] = React.useState(0);
     const onSubmit = (data) => {
+        console.log("HERE", data)
+        requestDestinations(data);
         // console.log(Object.keys(errors));
 
     };
@@ -79,7 +95,7 @@ const QForm = () => {
                 In three words, I would describe myself as 
                     <input
                         type="text"
-                        {...register('1', {
+                        {...register('interests', {
                             required: {
                                 value: true,
                                 message: '*This field is required'
@@ -111,7 +127,7 @@ const QForm = () => {
                 The most extreme free-time entertainment activity that I have done is 
                     <input
                         type="text"
-                        {...register('2', {
+                        {...register('budget', {
                             required: {
                                 value: true,
                                 message: '*This field is required'
@@ -143,7 +159,7 @@ const QForm = () => {
                 My favorite color is
                     <input
                         type="text"
-                        {...register('3', {
+                        {...register('season_weather', {
                             required: {
                                 value: true,
                                 message: '*This field is required'
@@ -175,7 +191,7 @@ const QForm = () => {
                 When I listen to music, I usually listen to
                     <input
                         type="text"
-                        {...register('4', {
+                        {...register('cultural_language_familiarity', {
                             required: {
                                 value: true,
                                 message: '*This field is required'
@@ -210,7 +226,7 @@ const QForm = () => {
                 My biggest fears are
                     <input
                         type="text"
-                        {...register('5', {
+                        {...register('food_preference', {
                             required: {
                                 value: true,
                                 message: '*This field is required'

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from fastapi import FastAPI, Request
 from fastapi.encoders import jsonable_encoder
+from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import JSONResponse
 
 from openai_test import ask_openai
@@ -40,7 +41,7 @@ def create_openai_request_message_activities(json_data):
 async def return_cities(request: Request):
 
     # Gets the request body as JSON
-    json_data = await request.json()
+    json_data = request.json()
 
     openai_request_message = create_openai_request_message_cities(json_data)
 
@@ -55,7 +56,7 @@ async def return_cities(request: Request):
 async def return_activities(request: Request):
 
     # Gets the request body as JSON
-    json_data = await request.json()
+    json_data = request.json()
     openai_request_message = create_openai_request_message_activities(json_data)
 
     # OpenAI returns two list one with activities and the other with descriptions
@@ -63,4 +64,17 @@ async def return_activities(request: Request):
 
     return JSONResponse(content=jsonable_encoder({"message": "Data was sent to OpenAI. Here is the response",
                                                   "activities_list":activities_list,
-                                                  "activity_descriptions": activity_descriptions }))
+
+                                              "activity_descriptions": activity_descriptions }))
+origins = [
+  "*"
+]
+
+# Configure CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
