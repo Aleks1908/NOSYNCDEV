@@ -4,11 +4,22 @@ from datetime import timedelta, date
 import requests
 from dotenv import load_dotenv
 
+def get_amadeus_api_token(api_token_url,api_key,api_secret):
+    response = requests.post(
+        api_token_url,
+        data={"grant_type": "client_credentials"},
+        auth=(api_key, api_secret),
+    )
+    api_token = response.json()["access_token"]
+    return api_token
 
 def get_cheapest_flights(destination_code):
     load_dotenv()
+    api_key = os.getenv("AMADEUS_API_KEY")
+    api_secret = os.getenv("AMADEUS_API_SECRET")
+    api_token_url = os.getenv("AMADEUS_API_TOKEN_URL")
 
-    api_token = os.getenv("AMADEUS_API_TOKEN")
+    api_token = get_amadeus_api_token(api_token_url,api_key,api_secret)
     api_url = os.getenv("AMADEUS_API_URL")
     # Get tomorrow's date
     tomorrow = date.today() + timedelta(days=1)
@@ -26,7 +37,7 @@ def get_cheapest_flights(destination_code):
         "max": 20
     }
 
-    # Send the request to Amadeus API and get the response
+    # # Send the request to Amadeus API and get the response
     response = requests.get(api_url, headers=headers, params=params)
     # Parse the response and extract the flight offers
     flight_numbers = response.json()["meta"]["count"]

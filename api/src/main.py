@@ -10,7 +10,6 @@ from openai_test import ask_openai
 
 app = FastAPI()
 
-
 def create_openai_request_message_cities(json_data):
     """Creates the request message for OpenAI with values for preferred location"""
     try:
