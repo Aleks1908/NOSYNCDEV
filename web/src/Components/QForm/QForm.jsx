@@ -152,8 +152,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -183,8 +183,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -214,8 +214,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -245,8 +245,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -279,8 +279,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -323,8 +323,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -354,8 +354,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -385,8 +385,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -416,8 +416,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
@@ -447,8 +447,8 @@ if(isFetching){
                             },
                             minLength: {
                                 message:
-                                    '*Minimum length is 4 characters',
-                                value: 4
+                                    '*Minimum length is 2 characters',
+                                value: 2
                             },
                             maxLength: {
                                 message:
