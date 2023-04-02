@@ -1,3 +1,6 @@
+Frontendsetup:
+cd web/npm install
+Backend setup:
 .PHONY: install-api
 install-api-win:
 	sudo apt update
