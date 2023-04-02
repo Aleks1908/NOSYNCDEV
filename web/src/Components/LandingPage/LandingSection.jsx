@@ -11,7 +11,10 @@ export const LandingSection = () => {
                     <h1 className="landing-header"><span id="spin"></span></h1>
                 </div>
                 <div className="landing-header-info">
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
+                    <p>Explore the world with ease - book your next adventure to the perfect destination. 
+                        From beach getaways to mountain retreats, find your perfect escape with our hassle-free 
+                        travel booking platform.
+                    </p>
                 </div>
                 <div className="landing-btn"> 
                     <a href="#Questionnaire"> Questionnaire</a>
