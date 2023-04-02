@@ -43,19 +43,20 @@ def get_cheapest_flights(destination_code):
     flight_numbers = response.json()["meta"]["count"]
     if flight_numbers <= 0:
         return ""
-    else:
-        data = response.json()
-        flight_data = []
+    data = response.json()['data']
+    flight_data = []
+    for flight in data:
+        carrier_code = flight['itineraries'][0]['segments'][0]['carrierCode']
+        departure = flight['itineraries'][0]['segments'][0]['departure']['iataCode']
+        arrival = flight['itineraries'][0]['segments'][0]['arrival']['iataCode']
+        price = flight['price']['grandTotal']
+        flight_data.append(
+            {'carrierCode': carrier_code, 'departure': departure, 'arrival': arrival, 'price': price})
+    # Convert the list of dictionaries to a list of tuples
+    tuple_list = [tuple(d.items()) for d in flight_data]
+    # Convert the list of tuples to a set to remove duplicates
+    unique_set = set(tuple_list)
+    # Convert the set of tuples back to a list of dictionaries
+    unique_list = [dict(t) for t in unique_set][0:5]
+    return unique_list
 
-        for flight in data['data']:
-            carrier_code = flight['itineraries'][0]['segments'][0]['carrierCode']
-            departure = flight['itineraries'][0]['segments'][0]['departure']['iataCode']
-            arrival = flight['itineraries'][0]['segments'][-1]['arrival']['iataCode']
-            price = float(flight['price']['total'])
-            flight_data.append(
-                {'carrierCode': carrier_code, 'departure': departure, 'arrival': arrival, 'price': price})
-
-        # sort the list of dictionaries by price from smallest to largest
-        flight_data = sorted(flight_data, key=lambda x: x['price'])
-
-        return flight_data
