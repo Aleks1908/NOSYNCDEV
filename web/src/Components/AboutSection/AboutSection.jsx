@@ -3,7 +3,7 @@ import './about_section.css';
 
 export const AboutSection = () => {
     return (
-        <div className="about-main">
+        <div className="about-main" id="About">
             <div className="about-text">
                 <h1>About us</h1>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration 

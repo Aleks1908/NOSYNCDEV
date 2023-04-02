@@ -6,7 +6,7 @@ export const FactsSection = (props) => {
     const {children} = props
 
     return (
-        <div className="facts-main-container">
+        <div className="facts-main-container" id="FeaturedPlaces">
             <h1 className="facts-header">Featured places</h1>
             <div className="facts-components">   
                 <FactCard
