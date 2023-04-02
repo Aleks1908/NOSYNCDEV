@@ -234,7 +234,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                When I listen to music, I usually listen to
+                When I listen to music, I usually listen to the
                     <input
                         type="text"
                         {...register('music_preference', {
@@ -312,7 +312,7 @@ if(isFetching){
             >
             <div className="send-info">
                 <label>
-                    Toni
+                    My favorite free time activity and interest is
                     <input
                         type="text"
                         {...register('interests', {
@@ -343,7 +343,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My travel budget is
                     <input
                         type="text"
                         {...register('budget', {
@@ -374,7 +374,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My favorite season weather is
                     <input
                         type="text"
                         {...register('season_weather', {
@@ -405,7 +405,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My prefered spoken language is
                     <input
                         type="text"
                         {...register('cultural_language_familiarity', {
@@ -436,7 +436,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My favorite type of food is
                     <input
                         type="text"
                         {...register('food_preference', {
@@ -476,7 +476,7 @@ if(isFetching){
                 />
             </form>}
             {formStep === 2 && (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Select a city:</h2>
                 <div className="city-container">
                   {cities.map((city, index) => (
