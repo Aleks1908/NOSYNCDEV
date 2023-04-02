@@ -76,10 +76,9 @@ const QForm = () => {
         >
             <div className="send-info">
                 <label>
-                    Full Name
+                In three words, I would describe myself as 
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('1', {
                             required: {
                                 value: true,
@@ -109,10 +108,9 @@ const QForm = () => {
             </div>
             <div className="send-info">
                 <label>
-                    Full Name
+                The most extreme free-time entertainment activity that I have done is 
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('2', {
                             required: {
                                 value: true,
@@ -142,10 +140,9 @@ const QForm = () => {
             </div>
             <div className="send-info">
                 <label>
-                    Full Name
+                My favorite color is
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('3', {
                             required: {
                                 value: true,
@@ -175,10 +172,9 @@ const QForm = () => {
             </div>
             <div className="send-info">
                 <label>
-                    Full Name
+                When I listen to music, I usually listen to
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('4', {
                             required: {
                                 value: true,
@@ -202,16 +198,18 @@ const QForm = () => {
                         })}
                     />
                 </label>
+                <label>
+                genre
+                </label>
                 <p className="error-msg">
                     {errors.fullname?.message}
                 </p>
             </div>
             <div className="send-info">
                 <label>
-                    Full Name
+                My biggest fears are
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('5', {
                             required: {
                                 value: true,
@@ -257,7 +255,6 @@ const QForm = () => {
                     Toni
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('12', {
                             required: {
                                 value: true,
@@ -290,7 +287,6 @@ const QForm = () => {
                     Toni
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('99', {
                             required: {
                                 value: true,
@@ -323,7 +319,6 @@ const QForm = () => {
                     Toni
                     <input
                         type="text"
-                        placeholder="Enter your name"
                         {...register('88', {
                             required: {
                                 value: true,

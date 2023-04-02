@@ -34,12 +34,13 @@ form {
     height: 9vh;
     justify-content: center;
     align-items: center;
-    width: 200%;
+    width: 100%;
     background-color: bisque;
 }
 
 .send-info input{
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .register-btn {
