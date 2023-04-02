@@ -11,25 +11,20 @@ app = FastAPI()
 
 
 def create_openai_request_message_cities(json_data):
-    """Creates the request message for OpenAI with values from response_body"""
+    """Creates the request message for OpenAI with values for preferred location"""
     try:
         interests = json_data["interests"]
         budget = json_data["budget"]
         season_weather = json_data["season_weather"]
         cultural_language_familiarity = json_data["cultural_language_familiarity"]
         food_preference = json_data["food_preference"]
+        str_message = f"What are your personal interests? What is your budget? What is your favourite season and weather? What are your cultural and language familiarity preferences? What type of food do you prefer? {interests} {budget}, {season_weather} {cultural_language_familiarity} {food_preference} Based on the user's answers recommend five destinations. Return the destinations in the format city, country: short description up to 30 words"
+        return str_message
     except Exception as e:
         return ""
 
-
-    str_message = f"What are your personal interests? What is your budget? What is your favourite season and weather? What are your cultural and language familiarity preferences? What type of food do you prefer? {interests} {budget}, {season_weather} {cultural_language_familiarity} {food_preference} Based on the user's answers recommend five destinations. Return the destinations in the format city, country: short description up to 30 words"
-
-
-    return str_message
-
-
 def create_openai_request_message_activities(json_data):
-    """Creates the request message for OpenAI with values from response_body"""
+    """Creates the request message for OpenAI with values for personality type"""
     try:
         city = json_data["city"]
         short_description = json_data["short_description"]
@@ -37,11 +32,10 @@ def create_openai_request_message_activities(json_data):
         fav_color = json_data["fav_color"]
         music_preference = json_data["music_preference"]
         fears = json_data["fears"]
+        str_message = f"How would you describe yourself in three words? What is the most extreme activity you have done? What is your favourite color? What type of music do you listen to? What are your fears? {short_description} {extreme_activity} {fav_color} {music_preference} {fears} Based on the user's answers recommend five activities in {city}. Return the activities in the format activity: description with reasons why do you recommend it, limit it to 25 words."
+        return str_message
     except Exception as e:
         return ""
-    str_message = f"How would you describe yourself in three words? What is the most extreme activity you have done? What is your favourite color? What type of music do you listen to? What are your fears? {short_description} {extreme_activity} {fav_color} {music_preference} {fears} Based on the user's answers recommend five activities in {city}. Return the activities in the format activity: description with reasons why do you recommend it, limit it to 25 words."
-
-    return str_message
 
 @app.post("/showcities/")
 async def return_cities(request: Request):
