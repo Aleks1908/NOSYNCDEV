@@ -498,7 +498,7 @@ if(isFetching){
                 />
               </form>)}
               {formStep === 3 && (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Select an activity :</h2>
                 <div className="city-container">
                   {activities.map((activity, index) => (
@@ -519,7 +519,7 @@ if(isFetching){
                 />
               </form>)}
               {formStep === 4 && (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Your plane options:</h2>
                 <div>
                     {flights.map((flight) => (
