@@ -147,13 +147,16 @@ input[type=text]{
   }
 
 .city-select {
-    font-weight: bold;
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 40%;
-    font-size: 1rem;
+    width: 50%;
+    font-size: 1.5rem;
     margin-bottom: 10%;
+}
+
+.city-select div{
+    width: 90%;
 }
 
 .city-select input{
@@ -164,11 +167,25 @@ input[type=text]{
 }
 
 .city-select p{
-    /* font-weight: bold; */
     justify-content: left;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 10%;
     margin-left: 20%;
+    text-align: justify;
+}
+
+input[type=radio]{
+    margin-left: 10%;
+    width: auto;
+    font-size: 1.7rem;
+}
+
+.city-select label {
+    font-weight: bold;
+}
+
+.no-flights {
+    margin-left: 0% !important; 
 }
   

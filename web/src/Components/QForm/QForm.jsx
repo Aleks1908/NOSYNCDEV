@@ -537,7 +537,7 @@ if(isFetching){
               {formStep === 4 && flightsError === true && (
                 <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Your plane options:</h2>
-                <p>There are no available flights.</p>
+                <p className="no-flights">There are no available flights.</p>
               </form>)}
         </div>
     );
