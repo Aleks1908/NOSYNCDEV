@@ -110,7 +110,7 @@ const QForm = () => {
 
             setTimeout(() => {
                 setIsFetching(false);
-            }, 5250);
+            }, 5500);
             setSubmitPressed(false);
             setFormStep(formStep + 1);
             return;
