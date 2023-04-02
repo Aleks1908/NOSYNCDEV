@@ -57,10 +57,12 @@ form {
     padding: 2% 6% 2% 6%;
     margin-top: 10%;
     cursor: pointer;
+    background-color: blue;
+    color: white;
 }
 
 .register-btn:hover {
-    background-color: #19b700;
+    background-color: darkblue;
     color: white;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -90,7 +92,6 @@ form {
 }
 
 @media only screen and (max-width: 300px) {
-
     .radio-btn .radio {
         width: 8%;
     }
