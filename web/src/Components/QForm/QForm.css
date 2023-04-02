@@ -153,6 +153,7 @@ input[type=text]{
     align-items: center;
     width: 30%;
     font-size: 1rem;
+    margin-bottom: 10%;
 }
 
 .city-select input{
