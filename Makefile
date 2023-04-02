@@ -1,5 +1,6 @@
 .PHONY: install-api
 install-api-win:
+	sudo apt update
 	sudo apt install python3-pip
 	cd ./api/ && python3 -m venv env
 	cd ./api && bash -c "source env/bin/activate && pip3 install -r requirements.txt"
