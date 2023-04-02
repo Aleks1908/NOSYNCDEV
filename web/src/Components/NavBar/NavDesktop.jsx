@@ -10,7 +10,7 @@ const NavDesktop = () => {
             <div className="navbar-buttons">
                 <a href="#">About</a>
                 <a href="#">Questionnaire</a>
-                <a href="#">Results</a>
+                <a href="#">Featured places</a>
                 <a href="#">Contact us</a>
             </div>
         </div>

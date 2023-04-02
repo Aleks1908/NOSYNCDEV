@@ -1,0 +1,58 @@
+.contact-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column  ;
+    height: 60vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: "Rajdhani";
+}
+
+.contact-text {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 5%;
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+.contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+}
+
+.icon {
+    margin: 5%;
+    width: 30%;
+    height: 30%;
+    color: #033852;
+    cursor: pointer;
+}
+
+.contact-text h1 {
+    font-size: 2.7rem;
+    color: #033852;
+}
+
+@media only screen and (max-width: 900px) {
+    .contact-main {
+        height: fit-content;
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+    .contact-text {
+        width: 90%;
+        margin-right: 0;
+    }
+    .contact-picture {
+        width: 95%;
+    }
+}
