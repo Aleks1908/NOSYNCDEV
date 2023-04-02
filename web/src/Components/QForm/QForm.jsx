@@ -40,35 +40,27 @@ const QForm = () => {
             })
         } else if (formStep == 3){
             console.log("HERE3")
-            // axios({
-            //     method:'post',
-            //     url: "http://localhost:8000/activities", 
-            //     data
-            // })
-            // .then((res) => {
-            //     console.log(res);
-            // })
-            // .catch((err) => {
-            //     console.log(err);
-            // })
-            const carrierCode = ['KL', 'RO', 'FB', 'LH'];
-            const departure = ['LHR', 'LHR', 'LHR', 'LHR'];
-            const arrival = ['SOF', 'VAR', 'PAR', 'SOF'];
-            const price = ['292.78', '292.78', '276.63', '210.85']
-            setCarrierCode(carrierCode);
-            setDeparture(departure)
-            setArrival(arrival)
-            setPrice(price)
+            axios({
+                method:'post',
+                url: "http://localhost:8000/flights", 
+                data
+            })
+            .then((res) => {
+                console.log(res);
+                const flights = res.data.flights_list.map((flightString) => JSON.parse(flightString));
+                setFlights(flights);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            
         }
     }
     
     const [cities, setCities] = useState([]);
     const [descriptions, setDescriptions] = useState([]);
     const [activities, setActivities] = useState([]);
-    const [carrierCode, setCarrierCode] = useState([]);
-    const [departure, setDeparture] = useState([]);
-    const [arrival, setArrival] = useState([]);
-    const [price, setPrice] = useState([]);
+    const [flights, setFlights] = useState([]);
 
     const [isFetching, setIsFetching] = useState(false);
 
@@ -118,8 +110,7 @@ const QForm = () => {
 
             setTimeout(() => {
                 setIsFetching(false);
-                console.log("iuashifsabifs")
-            }, 2500);
+            }, 5500);
             setSubmitPressed(false);
             setFormStep(formStep + 1);
             return;
@@ -138,13 +129,13 @@ const QForm = () => {
 if(isFetching){
     return(
         <div className="loader">
-            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
         </div>
     )
  } else{
     return (
-        <div className="registration-main" id="registration">
-            <h1>Questionare</h1>
+        <div className="registration-main" id="Questionnaire">
+            <h1>Questionnaire</h1>
             {formStep === 0 &&<form 
             onSubmit={handleSubmit(onSubmit)}
             >
@@ -243,7 +234,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                When I listen to music, I usually listen to
+                When I listen to music, I usually listen to the
                     <input
                         type="text"
                         {...register('music_preference', {
@@ -321,7 +312,7 @@ if(isFetching){
             >
             <div className="send-info">
                 <label>
-                    Toni
+                    My favorite free time activity and interest is
                     <input
                         type="text"
                         {...register('interests', {
@@ -352,7 +343,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My travel budget is
                     <input
                         type="text"
                         {...register('budget', {
@@ -383,7 +374,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My favorite season weather is
                     <input
                         type="text"
                         {...register('season_weather', {
@@ -414,7 +405,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My prefered spoken language is
                     <input
                         type="text"
                         {...register('cultural_language_familiarity', {
@@ -445,7 +436,7 @@ if(isFetching){
             </div>
             <div className="send-info">
                 <label>
-                    Toni
+                    My favorite type of food is
                     <input
                         type="text"
                         {...register('food_preference', {
@@ -485,7 +476,7 @@ if(isFetching){
                 />
             </form>}
             {formStep === 2 && (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Select a city:</h2>
                 <div className="city-container">
                   {cities.map((city, index) => (
@@ -507,7 +498,7 @@ if(isFetching){
                 />
               </form>)}
               {formStep === 3 && (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Select an activity :</h2>
                 <div className="city-container">
                   {activities.map((activity, index) => (
@@ -528,18 +519,19 @@ if(isFetching){
                 />
               </form>)}
               {formStep === 4 && (
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Your plane options:</h2>
-                <div className="city-container">
-                  {carrierCode.map((carrierCode, index) => (
-                    <div key={index} className="">
-                      <label>{carrierCode}</label>
-                      <label>{departure[index]}</label>
-                      <label>{arrival[index]}</label>
-                      <label>{price[index]}</label>
-                    </div>
-                  ))}
+                <div>
+                    {flights.map((flight) => (
+                        <div key={flight.id}>
+                        <p>Carrier Code: {flight.carrierCode}</p>
+                        <p>Departure: {flight.departure}</p>
+                        <p>Arrival: {flight.arrival}</p>
+                        <p>Price: {flight.price}</p>
+                        </div>
+                    ))}
                 </div>
+
               </form>)}
         </div>
     );

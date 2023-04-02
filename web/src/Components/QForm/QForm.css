@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: column;
     width: 90%;
-    height: 90vh;
+    height: fit-content;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 4%;
@@ -123,10 +123,10 @@ input[type=text]{
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid #000;
+    border: 8px solid #033852;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #000 transparent transparent transparent;
+    border-color: #033852 transparent transparent transparent;
   }
   .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -145,4 +145,20 @@ input[type=text]{
       transform: rotate(360deg);
     }
   }
+
+.city-select {
+    font-weight: bold;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 30%;
+    font-size: 1rem;
+}
+
+.city-select input{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-bottom: 3px solid #033852;
+}
   

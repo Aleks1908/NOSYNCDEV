@@ -8,10 +8,10 @@ const NavDesktop = () => {
                 <img src="../../../journo-logo.png" alt="" />
             </div>
             <div className="navbar-buttons">
-                <a href="#">About</a>
-                <a href="#">Questionnaire</a>
-                <a href="#">Results</a>
-                <a href="#">Contact us</a>
+                <a href="#About">About</a>
+                <a href="#Questionnaire">Questionnaire</a>
+                <a href="#FeaturedPlaces">Featured places</a>
+                <a href="#ContactUs">Contact us</a>
             </div>
         </div>
     );
