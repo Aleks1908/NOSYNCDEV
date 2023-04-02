@@ -32,7 +32,6 @@ const QForm = () => {
                 data
             })
             .then((res) => {
-                console.log(res.data.activities_list);
                 const activities = res.data.activities_list;
                 setActivities(activities);
             })
@@ -52,10 +51,26 @@ const QForm = () => {
             // .catch((err) => {
             //     console.log(err);
             // })
+            const carrierCode = ['KL', 'RO', 'FB', 'LH'];
+            const departure = ['LHR', 'LHR', 'LHR', 'LHR'];
+            const arrival = ['SOF', 'VAR', 'PAR', 'SOF'];
+            const price = ['292.78', '292.78', '276.63', '210.85']
+            setCarrierCode(carrierCode);
+            setDeparture(departure)
+            setArrival(arrival)
+            setPrice(price)
         }
     }
     
-        const [isFetching, setIsFetching] = useState(false);
+    const [cities, setCities] = useState([]);
+    const [descriptions, setDescriptions] = useState([]);
+    const [activities, setActivities] = useState([]);
+    const [carrierCode, setCarrierCode] = useState([]);
+    const [departure, setDeparture] = useState([]);
+    const [arrival, setArrival] = useState([]);
+    const [price, setPrice] = useState([]);
+
+    const [isFetching, setIsFetching] = useState(false);
 
 
     const { register, 
@@ -87,9 +102,7 @@ const QForm = () => {
     const [submitPressed, setSubmitPressed] = useState(false);
     const [submitButtonValue, setSubmitButtonValue] = useState('Register');
 
-    const [cities, setCities] = useState([]);
-    const [descriptions, setDescriptions] = useState([]);
-    const [activities, setActivities] = useState([]);
+
 
 
     const checkButtonAvailability = () => {
@@ -106,7 +119,7 @@ const QForm = () => {
             setTimeout(() => {
                 setIsFetching(false);
                 console.log("iuashifsabifs")
-            }, 1500);
+            }, 2500);
             setSubmitPressed(false);
             setFormStep(formStep + 1);
             return;
@@ -513,6 +526,20 @@ if(isFetching){
                 checkButtonAvailability();
             }}
                 />
+              </form>)}
+              {formStep === 4 && (
+                <form onSubmit={handleSubmit(onSubmit)}>
+                <h2>Your plane options:</h2>
+                <div className="city-container">
+                  {carrierCode.map((carrierCode, index) => (
+                    <div key={index} className="">
+                      <label>{carrierCode}</label>
+                      <label>{departure[index]}</label>
+                      <label>{arrival[index]}</label>
+                      <label>{price[index]}</label>
+                    </div>
+                  ))}
+                </div>
               </form>)}
         </div>
     );
