@@ -30,7 +30,7 @@ def get_cheapest_flights(destination_code):
         "Content-Type": "application/vnd.amadeus+json"
     }
     params = {
-        "originLocationCode": "SOF",
+        "originLocationCode": "LHR",
         "destinationLocationCode": destination_code,
         "departureDate": tomorrow.strftime("%Y-%m-%d"),
         "adults": 1,
