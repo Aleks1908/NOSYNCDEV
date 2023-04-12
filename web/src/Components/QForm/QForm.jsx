@@ -52,7 +52,6 @@ const QForm = () => {
             })
             .catch((err) => {
                 console.log(err);
-                setFlightsError(true);
             })
             
         }
@@ -62,7 +61,6 @@ const QForm = () => {
     const [descriptions, setDescriptions] = useState([]);
     const [activities, setActivities] = useState([]);
     const [flights, setFlights] = useState([]);
-    const [flightsError, setFlightsError] = useState(false)
     const [isFetching, setIsFetching] = useState(false);
 
 
@@ -519,7 +517,7 @@ if(isFetching){
             }}
                 />
               </form>)}
-              {formStep === 4 && flightsError === false && (
+              {formStep === 4 && (
                 <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Your plane options:</h2>
                 <div>
@@ -534,11 +532,11 @@ if(isFetching){
                 </div>
 
               </form>)}
-              {formStep === 4 && flightsError === true && (
+              {/* {formStep === 4 && flightsError === true && (
                 <form className="city-select" onSubmit={handleSubmit(onSubmit)}>
                 <h2>Your plane options:</h2>
                 <p className="no-flights">There are no available flights.</p>
-              </form>)}
+              </form>)} */}
         </div>
     );
  }
