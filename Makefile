@@ -20,8 +20,7 @@ endif
 		cd ./api/ && source env/bin/activate && pip3 install -r requirements.txt
 		cd ./api/ && pip3 install fastapi
 		cd ./api/ && pip3 install "uvicorn[standard]"
-		cd ./api/ && pip3 freeze > requirements.txt
-
+		
 .PHONY: run-api
 run-api:
 	cd ./api/src && uvicorn main:app --reload
