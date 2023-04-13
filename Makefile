@@ -18,7 +18,7 @@ else ifeq ($(shell uname),Darwin)
 		brew install python@3.10
 endif
 		cd ./api/ && python3 -m venv env
-		cd ./api/ && source env/bin/activate 
+		cd ./api/ && . env/bin/activate 
 		cd ./api/ && pip3 install fastapi
 		cd ./api/ && pip3 install "uvicorn[standard]"
 		
